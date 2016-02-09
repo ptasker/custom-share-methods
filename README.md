@@ -51,3 +51,40 @@ In your JS code, call the FB.ui method:
 });
 
 ```
+
+## Twitter
+
+Twitter sharing is way easier than Facebook
+
+### Step 1
+
+```javascript
+//These are variables because in real life, you'll likely automatically create these elsewhere in your app.
+var share_url = 'http://whatever.com';
+var share_text = 'Your share text with marketing speak in it, preferably.';
+
+var url = 'http://twitter.com/share?url=' + share_url + '&text='+share_text;
+
+```
+### Step 2
+
+```javascript
+
+function openWindow(url) {
+    let winWidth, winHeight;
+
+    winWidth  = 600;
+    winHeight = 400;
+
+    var winTop  = (screen.height / 2) - (winHeight / 2);
+    var winLeft = (screen.width / 2) - (winWidth / 2);
+    var w       = window.open(url, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+
+    return (!w); // opens in new window/tab if allowed
+
+}
+
+    //something on click...
+    
+    openWindow(your_url_from_step_one);
+```
