@@ -88,3 +88,18 @@ function openWindow(url) {
     
     openWindow(your_url_from_step_one);
 ```
+
+## Tumblr
+
+Similar to Twitter. Example below is for posting a photo, buit you can change the posttype param to one of the other types,
+
+### Step 1
+
+```javascript
+//These are variables because in real life, you'll likely automatically create these elsewhere in your app.
+var share_url = 'http://whatever.com';
+var share_text = 'Your share text with marketing speak in it, preferably.';
+var share_title = '';
+var tumblr_url = 'https://www.tumblr.com/widgets/share/tool?CanonicalUrl=&url='+share_url+'&posttype=photo&title=' + title + '&caption=' + text+ '&content=' + short_photo_url;
+
+```
