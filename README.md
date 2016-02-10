@@ -96,7 +96,9 @@ var share_url = encodeURIComponent('http://whatever.com');
 var share_text = 'Your share text with marketing speak in it, preferably.';
 var share_title = 'Your share title';
 var post_type = 'photo'; //this can be any standard tumblr post types (https://www.tumblr.com/docs/en/api/v2#posts)
-var photo_url = encodeURIComponent('http://your-photo-url.com/example.jpg'); //If this wasn't a
+var photo_url = encodeURIComponent('http://your-photo-url.com/example.jpg'); 
+
+
 var tumblr_url = 'https://www.tumblr.com/widgets/share/tool?url='
 + share_url + '&posttype='
 + post_type + '&title='
@@ -111,6 +113,6 @@ Just like for Twitter, open a new window on click
 ```javascript
 $(".my-share-link").on("click", function(){
 
-    openWindow(your_url_from_step_one);  
+    openWindow(tumblr_url);  
 });
 ```
