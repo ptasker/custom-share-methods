@@ -147,7 +147,9 @@
 <span class="pl-k">var</span> share_text <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Your share text with marketing speak in it, preferably.<span class="pl-pds">'</span></span>;
 <span class="pl-k">var</span> share_title <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Your share title<span class="pl-pds">'</span></span>;
 <span class="pl-k">var</span> post_type <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>photo<span class="pl-pds">'</span></span>; <span class="pl-c">//this can be any standard tumblr post types (https://www.tumblr.com/docs/en/api/v2#posts)</span>
-<span class="pl-k">var</span> photo_url <span class="pl-k">=</span> <span class="pl-en">encodeURIComponent</span>(<span class="pl-s"><span class="pl-pds">'</span>http://your-photo-url.com/example.jpg<span class="pl-pds">'</span></span>); <span class="pl-c">//If this wasn't a</span>
+<span class="pl-k">var</span> photo_url <span class="pl-k">=</span> <span class="pl-en">encodeURIComponent</span>(<span class="pl-s"><span class="pl-pds">'</span>http://your-photo-url.com/example.jpg<span class="pl-pds">'</span></span>); 
+
+
 <span class="pl-k">var</span> tumblr_url <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>https://www.tumblr.com/widgets/share/tool?url=<span class="pl-pds">'</span></span>
 <span class="pl-k">+</span> share_url <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>&amp;posttype=<span class="pl-pds">'</span></span>
 <span class="pl-k">+</span> post_type <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>&amp;title=<span class="pl-pds">'</span></span>
@@ -162,7 +164,7 @@
 
 <div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>.my-share-link<span class="pl-pds">"</span></span>).<span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">"</span>click<span class="pl-pds">"</span></span>, <span class="pl-k">function</span>(){
 
-    <span class="pl-en">openWindow</span>(your_url_from_step_one);  
+    <span class="pl-en">openWindow</span>(tumblr_url);  
 });</pre></div>
       </section>
 
